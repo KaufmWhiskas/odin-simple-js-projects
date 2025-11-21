@@ -9,4 +9,3 @@ function camelize(string){
 
 console.log(camelize("background-color"));
 console.log(camelize("list-style-image"));
-camelize("-webkit-transition");
