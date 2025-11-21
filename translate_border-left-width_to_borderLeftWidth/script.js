@@ -1,12 +1,12 @@
 function camelize(string){
-    stringArray = string.split("-");
-    for(let i = 0; i < stringArray.length; i++){
-        stringArray[i] = stringArray[i].charAt(0).toUpperCase() + stringArray[i].slice(1);
-    }
-    string = stringArray.join("");
-    console.log(string);
+    return string
+    .split("-")
+    .map(
+        (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join("");
 }
 
-camelize("background-color");
-camelize("list-style-image");
+console.log(camelize("background-color"));
+console.log(camelize("list-style-image"));
 camelize("-webkit-transition");
